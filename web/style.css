@@ -1,0 +1,85 @@
+*{
+    box-sizing:border-box; /*設定每個物件都是實際大小*/
+}
+/*.div1{
+    width:300px;
+    height:300px;
+    color:white;
+    background-color:black;
+}
+.div2{
+    width:300px;
+    height:300px;
+    color:white;
+    background-color:black;
+    border:grey solid 3px;
+    padding:10px;
+}*/
+.col-1{width:8.33%;}
+.col-2{width:16.66%;}
+.col-3{width:25%;}
+.col-4{width:33.33%;}
+.col-5{width:41.66%;}
+.col-6{width:50%;}      /*設定每個網格的寬度*/
+.col-7{width:58.33%;}
+.col-8{width:66.66%;}
+.col-9{width:75%;}
+.col-10{width:83.33%;}
+.col-11{width:91.66%;}
+.col-12{width:100%;}
+[class*="col-"]{
+    float:left;     /*都靠左浮動，內距10px*/
+    padding:10px;
+}
+.row::after{
+    content:"";
+    clear:both;
+    display:table;
+}
+body{
+    margin:0;
+}
+.header{
+    color:white;
+    background-color:black;
+    height:3vh;
+}
+.banner{
+    height:3vh;
+}
+.footer{
+    color:white;
+    background-color:black;
+    font-size:2em;
+    text-align:center;
+}
+.row{
+    min-height:91.4vh;
+    background-color:lightgray;
+}
+.col-6{
+    text-align:center;
+    min-height: 91.4vh;;
+}
+.left{
+    border-right:black solid 2px;
+    min-height:91.4vh;
+    background-color:gray;
+}
+.right{
+    text-align:right;
+    border-left:black solid 3px;
+    min-height:91.4vh;
+    background-color:gray;
+}
+@media only screen and (max-width:768px){
+    [class*="col-"]{
+        width:100%;
+    }
+    .left{
+        border:none;
+    }
+    .right{
+        border:none;
+    }
+}
